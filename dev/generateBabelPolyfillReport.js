@@ -39,7 +39,7 @@ if (re.test(readmeData)) {
   const replacement = `[comment]: # (BABEL_POLYFILLS_REPORT_START)
 \`\`\`js
 // polyfills:
-${JSON.stringify(polyfillsData, null, 2)}
+${JSON.stringify(polyfillsData.filter((s, i, self) => self.indexOf(s) === i), null, 2)}
 // based on the targets:
 ${JSON.stringify(targets, null, 2)}
 \`\`\`
