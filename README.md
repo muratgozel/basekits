@@ -45,7 +45,7 @@ import {
   domkit
 } from 'basekits'
 ```
-Either you use es module imports or commonjs imports, only the kit you specified will be in your bundle. Tree-shaking tested in rollup.js but it will work in other bundlers.
+Either you use es module imports or commonjs imports, only the kit you specified will be in your bundle. Tree-shaking tested in [rollup.js](https://rollupjs.org) but it will work in other bundlers.
 
 Some kits contain other ones to function correctly. Here is a map:
 ```js
