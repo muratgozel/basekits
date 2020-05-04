@@ -222,6 +222,30 @@ stringkit.titlecase(str, locale = 'en-US', nouns = [])
 ### basekits.objectkit
 
 ```js
+/*
+* Flattens the nested object as key-value pairs
+* - $sep is put between each nested parts of a key.
+* - $roots keeps previous parent properties as they will be added as a prefix to each key
+*/
+objectkit.flatten(obj, sep = '.', roots = [])
+
+// Example:
+const obj1 = {
+  a: null,
+  b: 'b',
+  d: {dd: null},
+  e: {f: {g: 'g'}}
+}
+const flatten = objectkit.flatten(obj1)
+{
+  'a': null,
+  'b': 'b',
+  'd.dd': null,
+  'e.f.g': 'g'
+}
+```
+
+```js
 // Finds the value of the property specified in path inside an obj.
 objectkit.getProp(obj, path, defaultValue = undefined)
 
@@ -426,16 +450,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (15.46 KB)",
-  "basekits.amd.polyfilled.js (43.24 KB)",
-  "basekits.cjs.js (15.48 KB)",
-  "basekits.cjs.polyfilled.js (43.26 KB)",
-  "basekits.es.js (15.38 KB)",
-  "basekits.es.polyfilled.js (43.15 KB)",
-  "basekits.iife.js (15.41 KB)",
-  "basekits.iife.polyfilled.js (43.19 KB)",
-  "basekits.umd.js (15.61 KB)",
-  "basekits.umd.polyfilled.js (43.39 KB)"
+  "basekits.amd.js (15.78 KB)",
+  "basekits.amd.polyfilled.js (44.17 KB)",
+  "basekits.cjs.js (15.80 KB)",
+  "basekits.cjs.polyfilled.js (44.20 KB)",
+  "basekits.es.js (15.70 KB)",
+  "basekits.es.polyfilled.js (44.09 KB)",
+  "basekits.iife.js (15.73 KB)",
+  "basekits.iife.polyfilled.js (44.13 KB)",
+  "basekits.umd.js (15.93 KB)",
+  "basekits.umd.polyfilled.js (44.33 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -472,13 +496,14 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
   "es.object.assign",
   "es.string.match",
   "es.string.replace",
-  "es.object.keys",
-  "es.parse-float",
-  "web.timers",
+  "es.array.concat",
   "es.array.join",
+  "es.object.keys",
   "es.array.filter",
   "es.array.map",
-  "es.array.sort"
+  "es.array.sort",
+  "es.parse-float",
+  "web.timers"
 ]
 // based on the targets:
 {

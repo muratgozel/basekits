@@ -7,6 +7,19 @@ Basekits.prototype = Object.assign(
   TypeKit.prototype
 )
 
+Basekits.prototype.flatten = function flatten(obj, sep = '.', roots = []) {
+  const self = this
+  return Object.keys(obj).reduce(function(memo, prop) {
+    if (self.isObject(obj[prop])) {
+      memo = Object.assign({}, memo, self.flatten(obj[prop], sep, roots.concat([prop])))
+    }
+    else {
+      memo[roots.concat([prop]).join(sep)] = obj[prop]
+    }
+    return memo
+  }, {})
+}
+
 Basekits.prototype.getProp = function getProp(obj, paths, defaultValue = undefined) {
   if (!this.isObject(obj)) return defaultValue
 
