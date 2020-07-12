@@ -310,6 +310,22 @@ functionkit.destringify(value, basekitType = null)
 ```
 
 ```js
+// Stringifies the url object created by the native js function new URL('...')
+const obj = {
+  protocol: 'http:',
+  hostname: 'monodrom.org',
+  port: 81,
+  pathname: 'path'
+}
+functionkit.stringifyURLObject(obj)
+// Returns http://monodrom.org:81/path
+
+// Destringifies the input according to basekitType.
+// Returns value as it is if basekitType left empty. basekitType is one of basekits type.
+functionkit.destringify(value, basekitType = null)
+```
+
+```js
 /*
 * Runs condition function every interval miliseconds and runs callback if
 * condition function returns true. The callback will also be run if condition
@@ -450,16 +466,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (15.78 KB)",
-  "basekits.amd.polyfilled.js (44.17 KB)",
-  "basekits.cjs.js (15.80 KB)",
-  "basekits.cjs.polyfilled.js (44.20 KB)",
-  "basekits.es.js (15.70 KB)",
-  "basekits.es.polyfilled.js (44.09 KB)",
-  "basekits.iife.js (15.73 KB)",
-  "basekits.iife.polyfilled.js (44.13 KB)",
-  "basekits.umd.js (15.93 KB)",
-  "basekits.umd.polyfilled.js (44.33 KB)"
+  "basekits.amd.js (15.99 KB)",
+  "basekits.amd.polyfilled.js (44.38 KB)",
+  "basekits.cjs.js (16.01 KB)",
+  "basekits.cjs.polyfilled.js (44.40 KB)",
+  "basekits.es.js (15.91 KB)",
+  "basekits.es.polyfilled.js (44.30 KB)",
+  "basekits.iife.js (15.94 KB)",
+  "basekits.iife.polyfilled.js (44.34 KB)",
+  "basekits.umd.js (16.14 KB)",
+  "basekits.umd.polyfilled.js (44.54 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)

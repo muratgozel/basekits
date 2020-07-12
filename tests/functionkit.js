@@ -22,3 +22,12 @@ test('destringify.', () => {
   expect(functionkit.destringify('9.99')).toBe('9.99')
   expect(functionkit.destringify('9.99', 'number')).toBe(9.99)
 })
+
+test('stringify URL Object', () => {
+  const obj = {
+    protocol: 'http:',
+    hostname: 'monodrom.org',
+    port: 81
+  }
+  expect(functionkit.stringifyURLObject(obj)).toBe('http://monodrom.org:81')
+})

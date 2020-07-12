@@ -9,6 +9,14 @@ Basekits.prototype = Object.assign(
   ErrorKit.prototype
 )
 
+Basekits.prototype.stringifyURLObject = function stringifyURLObject(obj) {
+  return obj.protocol + '//' +
+    (obj.username && obj.password ? obj.username + ':' + obj.password + '@' : '') +
+    obj.hostname +
+    (obj.port != 80 ? ':' + obj.port : '') +
+    (typeof obj.pathname == 'string' ? obj.pathname : '')
+}
+
 Basekits.prototype.waitForIt = function waitForIt(condition, cb, interval = 300, timeout = 10000) {
   let timer = setInterval(function() {
     if (condition.call() === true) {
