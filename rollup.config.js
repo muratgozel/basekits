@@ -35,6 +35,6 @@ module.exports = {
     resolve(),
     commonjs(),
     babel(),
-    terser({sourcemap: false})
+    terser()
   ]
 }

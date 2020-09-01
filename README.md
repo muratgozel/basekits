@@ -466,16 +466,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (15.99 KB)",
-  "basekits.amd.polyfilled.js (44.38 KB)",
-  "basekits.cjs.js (16.01 KB)",
-  "basekits.cjs.polyfilled.js (44.40 KB)",
-  "basekits.es.js (15.91 KB)",
-  "basekits.es.polyfilled.js (44.30 KB)",
-  "basekits.iife.js (15.94 KB)",
-  "basekits.iife.polyfilled.js (44.34 KB)",
-  "basekits.umd.js (16.14 KB)",
-  "basekits.umd.polyfilled.js (44.54 KB)"
+  "basekits.amd.js (16.00 KB)",
+  "basekits.amd.polyfilled.js (44.40 KB)",
+  "basekits.cjs.js (16.03 KB)",
+  "basekits.cjs.polyfilled.js (44.42 KB)",
+  "basekits.es.js (15.92 KB)",
+  "basekits.es.polyfilled.js (44.32 KB)",
+  "basekits.iife.js (15.96 KB)",
+  "basekits.iife.polyfilled.js (44.35 KB)",
+  "basekits.umd.js (16.16 KB)",
+  "basekits.umd.polyfilled.js (44.55 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -512,12 +512,12 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
   "es.object.assign",
   "es.string.match",
   "es.string.replace",
-  "es.array.concat",
-  "es.array.join",
-  "es.object.keys",
   "es.array.filter",
+  "es.array.join",
   "es.array.map",
   "es.array.sort",
+  "es.array.concat",
+  "es.object.keys",
   "es.parse-float",
   "web.timers"
 ]
