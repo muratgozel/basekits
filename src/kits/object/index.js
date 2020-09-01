@@ -9,6 +9,7 @@ Basekits.prototype = Object.assign(
 
 Basekits.prototype.flatten = function flatten(obj, sep = '.', roots = []) {
   const self = this
+  if (!self.isObject(obj)) return undefined
   return Object.keys(obj).reduce(function(memo, prop) {
     if (self.isObject(obj[prop])) {
       memo = Object.assign({}, memo, self.flatten(obj[prop], sep, roots.concat([prop])))
