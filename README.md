@@ -467,15 +467,15 @@ This is an auto-generated report that shows the type, name and size of the bundl
 ```js
 [
   "basekits.amd.js (16.00 KB)",
-  "basekits.amd.polyfilled.js (44.40 KB)",
+  "basekits.amd.polyfilled.js (45.30 KB)",
   "basekits.cjs.js (16.03 KB)",
-  "basekits.cjs.polyfilled.js (44.42 KB)",
-  "basekits.es.js (15.92 KB)",
-  "basekits.es.polyfilled.js (44.32 KB)",
+  "basekits.cjs.polyfilled.js (45.46 KB)",
+  "basekits.es.js (15.93 KB)",
+  "basekits.es.polyfilled.js (45.36 KB)",
   "basekits.iife.js (15.96 KB)",
-  "basekits.iife.polyfilled.js (44.35 KB)",
-  "basekits.umd.js (16.16 KB)",
-  "basekits.umd.polyfilled.js (44.55 KB)"
+  "basekits.iife.polyfilled.js (45.26 KB)",
+  "basekits.umd.js (16.20 KB)",
+  "basekits.umd.polyfilled.js (45.50 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -506,18 +506,19 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
   "es.regexp.exec",
   "es.object.get-own-property-names",
   "es.string.split",
+  "es.array.concat",
   "es.array.index-of",
-  "es.array.reduce",
-  "es.array.slice",
-  "es.object.assign",
-  "es.string.match",
-  "es.string.replace",
-  "es.array.filter",
   "es.array.join",
+  "es.array.reduce",
+  "es.object.assign",
+  "es.object.keys",
+  "es.array.filter",
   "es.array.map",
   "es.array.sort",
-  "es.array.concat",
-  "es.object.keys",
+  "es.array.slice",
+  "es.string.match",
+  "es.string.replace",
+  "es.date.to-iso-string",
   "es.parse-float",
   "web.timers"
 ]
@@ -525,12 +526,12 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
 {
   "android": "4.4.3",
   "chrome": "49",
-  "edge": "17",
+  "edge": "18",
   "firefox": "52",
   "ie": "9",
   "ios": "9.3",
-  "opera": "66",
-  "safari": "11.1",
+  "opera": "67",
+  "safari": "5.1",
   "samsung": "4"
 }
 ```

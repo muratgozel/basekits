@@ -21,6 +21,7 @@ Basekits.prototype.waitForIt = function waitForIt(condition, cb, interval = 300,
   let timer = setInterval(function() {
     if (condition.call() === true) {
       clearInterval(timer)
+      timer = null
       cb.call()
     }
   }, interval)
