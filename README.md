@@ -243,6 +243,23 @@ const flatten = objectkit.flatten(obj1)
   'd.dd': null,
   'e.f.g': 'g'
 }
+
+// or:
+const obj5 = {
+  name: 'Sample 1',
+  fields: [
+    {age: 7, country: 'TR'},
+    {age: 9, country: 'AZ'}
+  ]
+}
+const flatten5 = objectkit.flatten(obj5)
+{
+  name: 'Sample 1',
+  'fields[0].age': 7,
+  'fields[0].country': 'TR',
+  'fields[1].age': 9,
+  'fields[1].country': 'AZ',
+}
 ```
 
 ```js
@@ -466,16 +483,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (16.00 KB)",
-  "basekits.amd.polyfilled.js (45.30 KB)",
-  "basekits.cjs.js (16.03 KB)",
-  "basekits.cjs.polyfilled.js (45.46 KB)",
-  "basekits.es.js (15.93 KB)",
-  "basekits.es.polyfilled.js (45.36 KB)",
-  "basekits.iife.js (15.96 KB)",
-  "basekits.iife.polyfilled.js (45.26 KB)",
-  "basekits.umd.js (16.20 KB)",
-  "basekits.umd.polyfilled.js (45.50 KB)"
+  "basekits.amd.js (16.26 KB)",
+  "basekits.amd.polyfilled.js (45.56 KB)",
+  "basekits.cjs.js (16.28 KB)",
+  "basekits.cjs.polyfilled.js (45.72 KB)",
+  "basekits.es.js (16.18 KB)",
+  "basekits.es.polyfilled.js (45.61 KB)",
+  "basekits.iife.js (16.21 KB)",
+  "basekits.iife.polyfilled.js (45.51 KB)",
+  "basekits.umd.js (16.45 KB)",
+  "basekits.umd.polyfilled.js (45.75 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -498,29 +515,29 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
   "es.regexp.to-string",
   "es.string.iterator",
   "web.dom-collections.iterator",
-  "es.array.find",
-  "es.number.constructor",
-  "es.number.is-finite",
-  "es.number.is-integer",
+  "es.date.to-iso-string",
+  "es.object.assign",
+  "es.parse-float",
   "es.regexp.constructor",
   "es.regexp.exec",
+  "web.timers",
   "es.object.get-own-property-names",
   "es.string.split",
   "es.array.concat",
   "es.array.index-of",
   "es.array.join",
   "es.array.reduce",
-  "es.object.assign",
   "es.object.keys",
-  "es.array.filter",
-  "es.array.map",
-  "es.array.sort",
   "es.array.slice",
   "es.string.match",
   "es.string.replace",
-  "es.date.to-iso-string",
-  "es.parse-float",
-  "web.timers"
+  "es.array.filter",
+  "es.array.map",
+  "es.array.sort",
+  "es.array.find",
+  "es.number.constructor",
+  "es.number.is-finite",
+  "es.number.is-integer"
 ]
 // based on the targets:
 {

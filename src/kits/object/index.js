@@ -9,16 +9,42 @@ Basekits.prototype = Object.assign(
 
 Basekits.prototype.flatten = function flatten(obj, sep = '.', roots = []) {
   const self = this
-  if (!self.isObject(obj)) return undefined
-  return Object.keys(obj).reduce(function(memo, prop) {
-    if (self.isObject(obj[prop])) {
-      memo = Object.assign({}, memo, self.flatten(obj[prop], sep, roots.concat([prop])))
-    }
-    else {
-      memo[roots.concat([prop]).join(sep)] = obj[prop]
-    }
-    return memo
-  }, {})
+
+  if (self.isObject(obj)) {
+    return Object
+      .keys(obj)
+      .reduce(function(memo, prop) {
+        if (self.isObject(obj[prop])) {
+          memo = Object.assign({}, memo, self.flatten(obj[prop], sep, roots.concat([prop])))
+        }
+        else if (self.isArray(obj[prop]) && self.isObject(obj[prop][0])) {
+          memo = Object.assign({}, memo, self.flatten(obj[prop], sep, roots.concat([prop])))
+        }
+        else {
+          memo[roots.concat([prop]).join(sep)] = obj[prop]
+        }
+        return memo
+      }, {})
+  }
+  else if (self.isArray(obj) && self.isObject(obj[0])) {
+    const lastItem = roots[roots.length-1]
+    return obj
+      .reduce(function(memo, o, i) {
+        roots.pop()
+        const updatedLastItem = lastItem + '[' + i + ']'
+        memo = Object
+          .keys(o)
+          .reduce(function(m, p, j) {
+            m[roots.concat([updatedLastItem, p]).join(sep)] = o[p]
+            return m
+          }, memo)
+
+        return memo
+      }, {})
+  }
+  else {
+    return undefined
+  }
 }
 
 Basekits.prototype.getProp = function getProp(obj, paths, defaultValue = undefined) {
