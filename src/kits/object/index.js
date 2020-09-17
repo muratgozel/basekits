@@ -14,10 +14,10 @@ Basekits.prototype.flatten = function flatten(obj, sep = '.', roots = []) {
     return Object
       .keys(obj)
       .reduce(function(memo, prop) {
-        if (self.isObject(obj[prop])) {
-          memo = Object.assign({}, memo, self.flatten(obj[prop], sep, roots.concat([prop])))
-        }
-        else if (self.isArray(obj[prop]) && self.isObject(obj[prop][0])) {
+        if (
+          self.isObject(obj[prop]) ||
+          (self.isArray(obj[prop]) && self.isObject(obj[prop][0]))
+        ) {
           memo = Object.assign({}, memo, self.flatten(obj[prop], sep, roots.concat([prop])))
         }
         else {
@@ -35,7 +35,15 @@ Basekits.prototype.flatten = function flatten(obj, sep = '.', roots = []) {
         memo = Object
           .keys(o)
           .reduce(function(m, p, j) {
-            m[roots.concat([updatedLastItem, p]).join(sep)] = o[p]
+            if (
+              self.isObject(o[p]) ||
+              (self.isArray(o[p]) && self.isObject(o[p][0]))
+            ) {
+              m = Object.assign({}, m, self.flatten(o[p], sep, roots.concat([updatedLastItem, p])))
+            }
+            else {
+              m[roots.concat([updatedLastItem, p]).join(sep)] = o[p]
+            }
             return m
           }, memo)
 

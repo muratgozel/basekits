@@ -1,6 +1,6 @@
 {
   "name": "basekits",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Tree-shakable javascript utility package for browser and node.",
   "main": "dist/basekits.cjs.js",
   "scripts": {

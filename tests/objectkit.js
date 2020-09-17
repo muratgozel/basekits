@@ -32,4 +32,20 @@ test('flatten', () => {
     'fields[1].country': 'AZ',
   }
   expect(objectkit.flatten(obj5)).toStrictEqual(obj5f)
+
+  const obj6 = {
+    name: 'Sample 2',
+    fields: [
+      {address: {country: 'TR'}, age: 10},
+      {address: {country: 'AZ'}, age: 12},
+    ]
+  }
+  const obj6f = {
+    name: 'Sample 2',
+    'fields[0].address.country': 'TR',
+    'fields[0].age': 10,
+    'fields[1].address.country': 'AZ',
+    'fields[1].age': 12,
+  }
+  expect(objectkit.flatten(obj6)).toStrictEqual(obj6f)
 })
