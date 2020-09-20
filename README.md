@@ -263,6 +263,80 @@ const flatten5 = objectkit.flatten(obj5)
 ```
 
 ```js
+/*
+* Reverse of the flatten. Unflattens, expands the key-value paired object.
+*/
+
+objectkit.unflatten(obj)
+
+// Examples:
+const obj3f = {
+  'name': 'Sample 2',
+  'family.since': '2020',
+  'family.children[0].name': 'Child 1',
+  'family.children[0].age': 7,
+  'family.children[0].address.city': 'City 1',
+  'family.children[1].name': 'Child 2',
+  'family.children[1].age': 3,
+  'family.children[1].address.city': 'City 2',
+  'abc.def': 1
+}
+objectkit.unflatten(obj3f)
+// Returns:
+{
+  "name": "Sample 2",
+  "family": {
+    "since": "2020",
+    "children": [
+      {
+        "name": "Child 1",
+        "age": 7,
+        "address": {
+          "city": "City 1"
+        }
+      },
+      {
+        "name": "Child 2",
+        "age": 3,
+        "address": {
+          "city": "City 2"
+        }
+      }
+    ]
+  },
+  "abc": {
+    "def": 1
+  }
+}
+```
+
+```js
+/*
+* Merges objects and properties of objects, recursively.
+* - $objects is the list of the objects you want to merge.
+* - $opts is an options object:
+    $opts = {
+      concatArrays: false,
+      discardNonObjectReplacements: false,
+      ignoreKeys: []
+    }
+*/
+objectkit.assignDeep(objects=[], opts={})
+
+// Example:
+const obj3 = {a: {b: {c: {d: '1', e: '2'}, f: '3'}}, g: ['4', '5']}
+const obj3a = {h: '6', a: {b: {i: '7'}}, g: ['8']}
+const obj3a2 = {h: '6', a: 'non-object', g: ['8']}
+objectkit.assignDeep([obj3, obj3a, obj3a2])
+// Returns:
+{a: 'non-object', g: ['8'], h: '6'}
+
+objectkit.assignDeep([obj3, obj3a, obj3a2], {discardNonObjectReplacements: true})
+// Returns:
+{a: {b: {c: {d: '1', e: '2'}, f: '3', i: '7'}}, g: ['8'], h: '6'}
+```
+
+```js
 // Finds the value of the property specified in path inside an obj.
 objectkit.getProp(obj, path, defaultValue = undefined)
 
@@ -483,16 +557,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (16.26 KB)",
-  "basekits.amd.polyfilled.js (45.56 KB)",
-  "basekits.cjs.js (16.28 KB)",
-  "basekits.cjs.polyfilled.js (45.72 KB)",
-  "basekits.es.js (16.18 KB)",
-  "basekits.es.polyfilled.js (45.61 KB)",
-  "basekits.iife.js (16.21 KB)",
-  "basekits.iife.polyfilled.js (45.51 KB)",
-  "basekits.umd.js (16.45 KB)",
-  "basekits.umd.polyfilled.js (45.75 KB)"
+  "basekits.amd.js (17.75 KB)",
+  "basekits.amd.polyfilled.js (47.26 KB)",
+  "basekits.cjs.js (17.77 KB)",
+  "basekits.cjs.polyfilled.js (47.36 KB)",
+  "basekits.es.js (17.67 KB)",
+  "basekits.es.polyfilled.js (47.26 KB)",
+  "basekits.iife.js (17.70 KB)",
+  "basekits.iife.polyfilled.js (47.22 KB)",
+  "basekits.umd.js (17.94 KB)",
+  "basekits.umd.polyfilled.js (47.46 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -515,29 +589,30 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
   "es.regexp.to-string",
   "es.string.iterator",
   "web.dom-collections.iterator",
-  "es.date.to-iso-string",
-  "es.object.assign",
-  "es.parse-float",
-  "es.regexp.constructor",
-  "es.regexp.exec",
-  "web.timers",
-  "es.object.get-own-property-names",
-  "es.string.split",
-  "es.array.concat",
   "es.array.index-of",
-  "es.array.join",
   "es.array.reduce",
-  "es.object.keys",
   "es.array.slice",
+  "es.object.assign",
+  "es.regexp.exec",
   "es.string.match",
   "es.string.replace",
+  "es.string.split",
+  "es.date.to-iso-string",
+  "es.parse-float",
+  "es.regexp.constructor",
+  "web.timers",
+  "es.array.concat",
   "es.array.filter",
+  "es.array.join",
   "es.array.map",
+  "es.object.keys",
+  "es.parse-int",
   "es.array.sort",
   "es.array.find",
   "es.number.constructor",
   "es.number.is-finite",
-  "es.number.is-integer"
+  "es.number.is-integer",
+  "es.object.get-own-property-names"
 ]
 // based on the targets:
 {
