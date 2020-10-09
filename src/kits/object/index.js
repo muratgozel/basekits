@@ -143,7 +143,9 @@ Basekits.prototype.getProp = function getProp(obj, paths, defaultValue = undefin
   if (!this.isObject(obj)) return defaultValue
 
   if (this.isString(paths)) paths = [paths]
+  else if (this.isNumber(paths)) paths = [paths]
   else if (!this.isArray(paths)) return defaultValue
+  else {}
 
   if (paths.length < 1) return defaultValue
 
@@ -152,6 +154,7 @@ Basekits.prototype.getProp = function getProp(obj, paths, defaultValue = undefin
   while (this.isObject(obj) && index < len) {
     obj = obj[paths[index]]
     index += 1
+    if (index < len && !this.isObject(obj)) return defaultValue
   }
 
   return this.isUndefined(obj) ? defaultValue : obj

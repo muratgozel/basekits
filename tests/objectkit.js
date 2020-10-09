@@ -1,5 +1,13 @@
 const {objectkit} = require('../dist/basekits.cjs.js')
 
+test('getProp', () => {
+  const obj1 = {a: '1', b: {c: '2'}, d: {e: {f: '3'}}}
+  expect(objectkit.getProp(obj1, 'a')).toEqual('1')
+  expect(objectkit.getProp(obj1, ['b'])).toStrictEqual({c: '2'})
+  expect(objectkit.getProp(obj1, ['b', 'c'])).toStrictEqual('2')
+  expect(objectkit.getProp(obj1, ['d', 'e', 'f', 'v'])).toStrictEqual(undefined)
+})
+
 test('assignDeep', () => {
   const obj1 = {a: '1', b: 'b', c: 'c'}
   const obj1a = {a: '1', b: 'b', c: 'c'}
