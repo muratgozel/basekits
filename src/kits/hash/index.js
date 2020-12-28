@@ -1,4 +1,4 @@
-const Basekits = require('../../base')
+import Basekits from '../../base'
 
 Basekits.prototype.hashcode = function hashcode(str) {
   let hash = 0
@@ -14,4 +14,4 @@ Basekits.prototype.hashcode = function hashcode(str) {
   return hash
 }
 
-module.exports = Basekits
+export default Basekits
