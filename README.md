@@ -557,16 +557,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (17.82 KB)",
-  "basekits.amd.polyfilled.js (47.33 KB)",
-  "basekits.cjs.js (17.84 KB)",
-  "basekits.cjs.polyfilled.js (47.43 KB)",
-  "basekits.es.js (17.73 KB)",
-  "basekits.es.polyfilled.js (47.32 KB)",
-  "basekits.iife.js (17.77 KB)",
-  "basekits.iife.polyfilled.js (47.28 KB)",
-  "basekits.umd.js (18.01 KB)",
-  "basekits.umd.polyfilled.js (47.52 KB)"
+  "basekits.amd.js (18.14 KB)",
+  "basekits.amd.polyfilled.js (47.88 KB)",
+  "basekits.cjs.js (18.16 KB)",
+  "basekits.cjs.polyfilled.js (47.98 KB)",
+  "basekits.es.js (18.06 KB)",
+  "basekits.es.polyfilled.js (47.87 KB)",
+  "basekits.iife.js (18.14 KB)",
+  "basekits.iife.polyfilled.js (47.88 KB)",
+  "basekits.umd.js (18.33 KB)",
+  "basekits.umd.polyfilled.js (48.07 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -578,51 +578,46 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
 ```js
 // polyfills:
 [
-  "es.symbol",
-  "es.symbol.description",
-  "es.symbol.iterator",
-  "es.array.iterator",
   "es.object.get-prototype-of",
   "es.object.set-prototype-of",
-  "es.object.to-string",
-  "es.reflect.construct",
-  "es.regexp.to-string",
-  "es.string.iterator",
-  "web.dom-collections.iterator",
-  "es.array.index-of",
-  "es.array.reduce",
-  "es.array.slice",
-  "es.object.assign",
-  "es.regexp.exec",
-  "es.string.match",
-  "es.string.replace",
-  "es.string.split",
-  "es.array.concat",
   "es.array.filter",
+  "es.array.index-of",
   "es.array.join",
   "es.array.map",
+  "es.array.sort",
+  "es.object.assign",
+  "es.array.concat",
+  "es.array.reduce",
+  "es.array.slice",
   "es.object.keys",
   "es.parse-int",
+  "es.regexp.exec",
+  "es.string.replace",
+  "es.string.split",
+  "es.symbol",
+  "es.symbol.description",
   "es.date.to-iso-string",
+  "es.object.to-string",
   "es.parse-float",
   "es.regexp.constructor",
+  "es.regexp.to-string",
   "web.timers",
+  "es.object.get-own-property-names",
+  "es.string.match",
   "es.array.find",
   "es.number.constructor",
   "es.number.is-finite",
-  "es.number.is-integer",
-  "es.array.sort",
-  "es.object.get-own-property-names"
+  "es.number.is-integer"
 ]
 // based on the targets:
 {
-  "android": "4.4.3",
+  "android": "85",
   "chrome": "49",
   "edge": "18",
-  "firefox": "52",
+  "firefox": "78",
   "ie": "9",
   "ios": "9.3",
-  "opera": "67",
+  "opera": "70",
   "safari": "5.1",
   "samsung": "4"
 }
