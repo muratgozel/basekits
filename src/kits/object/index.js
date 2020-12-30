@@ -142,7 +142,7 @@ Basekits.prototype.flatten = function flatten(obj, sep = '.', roots = []) {
 Basekits.prototype.getProp = function getProp(obj, paths, defaultValue = undefined) {
   if (!this.isObject(obj)) return defaultValue
 
-  if (this.isString(paths)) paths = [paths]
+  if (this.isString(paths)) paths = paths.split('.')
   else if (this.isNumber(paths)) paths = [paths]
   else if (!this.isArray(paths)) return defaultValue
   else {}

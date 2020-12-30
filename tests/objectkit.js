@@ -6,6 +6,7 @@ test('getProp', () => {
   expect(objectkit.getProp(obj1, ['b'])).toStrictEqual({c: '2'})
   expect(objectkit.getProp(obj1, ['b', 'c'])).toStrictEqual('2')
   expect(objectkit.getProp(obj1, ['d', 'e', 'f', 'v'])).toStrictEqual(undefined)
+  expect(objectkit.getProp(obj1, 'd.e.f')).toStrictEqual('3')
 })
 
 test('assignDeep', () => {
