@@ -557,16 +557,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (17.82 KB)",
-  "basekits.amd.polyfilled.js (47.55 KB)",
-  "basekits.cjs.js (17.84 KB)",
-  "basekits.cjs.polyfilled.js (47.65 KB)",
-  "basekits.es.js (17.74 KB)",
-  "basekits.es.polyfilled.js (47.54 KB)",
-  "basekits.iife.js (17.82 KB)",
-  "basekits.iife.polyfilled.js (47.55 KB)",
-  "basekits.umd.js (18.01 KB)",
-  "basekits.umd.polyfilled.js (47.74 KB)"
+  "basekits.amd.js (18.01 KB)",
+  "basekits.amd.polyfilled.js (47.42 KB)",
+  "basekits.cjs.js (18.03 KB)",
+  "basekits.cjs.polyfilled.js (47.53 KB)",
+  "basekits.es.js (17.93 KB)",
+  "basekits.es.polyfilled.js (47.43 KB)",
+  "basekits.iife.js (18.01 KB)",
+  "basekits.iife.polyfilled.js (47.43 KB)",
+  "basekits.umd.js (18.20 KB)",
+  "basekits.umd.polyfilled.js (47.62 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -577,47 +577,16 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
 [comment]: # (BABEL_POLYFILLS_REPORT_START)
 ```js
 // polyfills:
-[
-  "es.object.get-prototype-of",
-  "es.object.set-prototype-of",
-  "es.array.filter",
-  "es.array.index-of",
-  "es.array.join",
-  "es.array.map",
-  "es.array.sort",
-  "es.object.assign",
-  "es.object.get-own-property-names",
-  "es.regexp.exec",
-  "es.string.split",
-  "es.array.find",
-  "es.number.constructor",
-  "es.number.is-finite",
-  "es.number.is-integer",
-  "es.object.to-string",
-  "es.regexp.constructor",
-  "es.regexp.to-string",
-  "es.array.reduce",
-  "es.array.slice",
-  "es.string.match",
-  "es.string.replace",
-  "es.array.concat",
-  "es.object.keys",
-  "es.parse-int",
-  "es.symbol",
-  "es.symbol.description",
-  "es.date.to-iso-string",
-  "es.parse-float",
-  "web.timers"
-]
+[]
 // based on the targets:
 {
-  "android": "85",
+  "android": "4.4.3",
   "chrome": "49",
   "edge": "18",
   "firefox": "78",
   "ie": "9",
-  "ios": "9.3",
-  "opera": "70",
+  "ios": "6",
+  "opera": "73",
   "safari": "5.1",
   "samsung": "4"
 }

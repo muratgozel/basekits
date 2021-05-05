@@ -143,6 +143,12 @@ Basekits.prototype.onDocumentClick = function onDocumentClick(event) {
   const removeRecipes = []
   for (let i = 0; i < self.documentClickListenerRecipes.length; i++) {
     const recipe = self.documentClickListenerRecipes[i]
+
+    if (recipe.status == 'SKIP_THIS_TIME') {
+      self.documentClickListenerRecipes[i].status = 'READY'
+      continue;
+    }
+
     if (recipe.type == 'outsideClick') {
       // will remove recipe if 'once' set in 'opts'
       if (self.getProp(recipe, ['opts', 'once']) === true) {
@@ -204,7 +210,7 @@ Basekits.prototype.onOutsideClick = function onOutsideClick(_elements = [], fn, 
   // save this recipe
   self.documentClickListenerRecipes.push({
     type: 'outsideClick',
-    active: true,
+    status: self.documentClickListenerRegistered === false ? 'READY' : 'SKIP_THIS_TIME',
     elements: _elements,
     fn: fn,
     opts: opts,
@@ -214,9 +220,10 @@ Basekits.prototype.onOutsideClick = function onOutsideClick(_elements = [], fn, 
   // register document click listener if it hasn't been registered
   if (self.documentClickListenerRegistered === false) {
     self.documentClickListenerRegistered = true
+
     doc.addEventListener(
       'click',
-      self.debounce(self.onDocumentClick, 300, {trailing: true}),
+      self.debounce(self.onDocumentClick.bind(self), 300, {trailing: true}),
       false
     )
   }
@@ -229,8 +236,14 @@ Basekits.prototype.onOutsideClick = function onOutsideClick(_elements = [], fn, 
 }
 
 Basekits.prototype.removeOutsideClickListener = function removeOutsideClickListener(id) {
-  self.documentClickListenerRecipes = self.documentClickListenerRecipes
+  this.documentClickListenerRecipes = this.documentClickListenerRecipes
     .filter(r => r.id != id)
+}
+
+Basekits.prototype.onOutsideClick2 = function onOutsideClick2(_elements = [], fn, opts = {once: true}) {
+  const self = this
+
+
 }
 
 export default Basekits
