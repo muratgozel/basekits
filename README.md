@@ -557,7 +557,7 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (18.01 KB)",
+  "basekits.amd.js (18.00 KB)",
   "basekits.amd.polyfilled.js (47.42 KB)",
   "basekits.cjs.js (18.03 KB)",
   "basekits.cjs.polyfilled.js (47.53 KB)",
