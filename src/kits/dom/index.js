@@ -65,6 +65,11 @@ Basekits.prototype.getAbsoluteDistanceFromTop = function getAbsoluteDistanceFrom
   return scrollY + element.getBoundingClientRect().top
 }
 
+Basekits.prototype.getAbsoluteDistanceFromLeft = function getAbsoluteDistanceFromLeft(element) {
+  const scrollX = (((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
+  return scrollX + element.getBoundingClientRect().left
+}
+
 Basekits.prototype.getViewportRelativeDistanceFromTop = function getViewportRelativeDistanceFromTop(element) {
   return element.getBoundingClientRect().top
 }
