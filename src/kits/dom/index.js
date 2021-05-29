@@ -61,11 +61,13 @@ Basekits.prototype.getViewportDimensions = function getViewportDimensions() {
 }
 
 Basekits.prototype.getAbsoluteDistanceFromTop = function getAbsoluteDistanceFromTop(element) {
+  let t = null;
   const scrollY = (((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
   return scrollY + element.getBoundingClientRect().top
 }
 
 Basekits.prototype.getAbsoluteDistanceFromLeft = function getAbsoluteDistanceFromLeft(element) {
+  let t = null;
   const scrollX = (((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
   return scrollX + element.getBoundingClientRect().left
 }
