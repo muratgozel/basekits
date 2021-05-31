@@ -217,7 +217,7 @@ Basekits.prototype.onOutsideClick = function onOutsideClick(_elements = [], fn, 
   // save this recipe
   self.documentClickListenerRecipes.push({
     type: 'outsideClick',
-    status: self.documentClickListenerRegistered === false ? 'READY' : 'SKIP_THIS_TIME',
+    status: 'SKIP_THIS_TIME',
     elements: _elements,
     fn: fn,
     opts: opts,

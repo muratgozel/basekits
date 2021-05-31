@@ -557,16 +557,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (18.24 KB)",
-  "basekits.amd.polyfilled.js (47.66 KB)",
-  "basekits.cjs.js (18.26 KB)",
-  "basekits.cjs.polyfilled.js (47.76 KB)",
-  "basekits.es.js (18.16 KB)",
-  "basekits.es.polyfilled.js (47.66 KB)",
-  "basekits.iife.js (18.24 KB)",
-  "basekits.iife.polyfilled.js (47.66 KB)",
-  "basekits.umd.js (18.43 KB)",
-  "basekits.umd.polyfilled.js (47.85 KB)"
+  "basekits.amd.js (18.19 KB)",
+  "basekits.amd.polyfilled.js (47.61 KB)",
+  "basekits.cjs.js (18.22 KB)",
+  "basekits.cjs.polyfilled.js (47.71 KB)",
+  "basekits.es.js (18.11 KB)",
+  "basekits.es.polyfilled.js (47.61 KB)",
+  "basekits.iife.js (18.20 KB)",
+  "basekits.iife.polyfilled.js (47.61 KB)",
+  "basekits.umd.js (18.39 KB)",
+  "basekits.umd.polyfilled.js (47.80 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
