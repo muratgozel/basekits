@@ -1,8 +1,8 @@
 {
   "name": "basekits",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "Tree-shakable javascript utility package for browser and node.",
-  "main": "src/index.js",
+  "main": "dist/basekits.cjs.js",
   "scripts": {
     "build": "USE_POLYFILLS=off rollup --config rollup.config.js && USE_POLYFILLS=on rollup --config rollup.config.js",
     "gen-babel-report": "node dev/generateBabelPolyfillReport.js",
