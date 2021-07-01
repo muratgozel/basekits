@@ -557,16 +557,16 @@ This is an auto-generated report that shows the type, name and size of the bundl
 [comment]: # (DISTRIBUTIONS_REPORT_START)
 ```js
 [
-  "basekits.amd.js (18.19 KB)",
-  "basekits.amd.polyfilled.js (47.61 KB)",
-  "basekits.cjs.js (18.22 KB)",
-  "basekits.cjs.polyfilled.js (47.71 KB)",
-  "basekits.es.js (18.11 KB)",
-  "basekits.es.polyfilled.js (47.61 KB)",
-  "basekits.iife.js (18.20 KB)",
-  "basekits.iife.polyfilled.js (47.61 KB)",
-  "basekits.umd.js (18.39 KB)",
-  "basekits.umd.polyfilled.js (47.80 KB)"
+  "basekits.amd.js (18.40 KB)",
+  "basekits.amd.polyfilled.js (50.24 KB)",
+  "basekits.cjs.js (18.42 KB)",
+  "basekits.cjs.polyfilled.js (50.35 KB)",
+  "basekits.es.js (18.32 KB)",
+  "basekits.es.polyfilled.js (50.25 KB)",
+  "basekits.iife.js (18.40 KB)",
+  "basekits.iife.polyfilled.js (50.25 KB)",
+  "basekits.umd.js (18.59 KB)",
+  "basekits.umd.polyfilled.js (50.44 KB)"
 ]
 ```
 [comment]: # (DISTRIBUTIONS_REPORT_END)
@@ -582,11 +582,11 @@ This is an auto-generated report that shows the pollyfils added by core-js to th
 {
   "android": "4.4.3",
   "chrome": "49",
-  "edge": "18",
+  "edge": "89",
   "firefox": "78",
   "ie": "9",
-  "ios": "6",
-  "opera": "73",
+  "ios": "9.3",
+  "opera": "75",
   "safari": "5.1",
   "samsung": "4"
 }
